@@ -9,7 +9,7 @@
 
 ## 📺 Demo Video
 
-**[Watch Demo Video (3 min)](YOUR_YOUTUBE_OR_VIMEO_LINK_HERE)**
+**[Watch Demo Video (3 min)](https://vimeo.com/1150735292?fl=sm&fe=ec)**
 
 ## 🌐 Live Demo
 
@@ -17,7 +17,7 @@
 
 ## 📦 Repository
 
-**[GitHub Repository](https://github.com/YOUR_USERNAME/InfronAI)**
+**[GitHub Repository](https://github.com/darshanbm26/InfronAI.git)**
 
 ---
 
@@ -396,9 +396,9 @@ This is an open-source project. You are free to use, modify, and distribute this
 
 ## 🔗 Important Links
 
-- 🌐 **Live Demo:** [YOUR_HOSTED_URL_HERE](YOUR_HOSTED_URL_HERE)
-- 📺 **Demo Video (3 min):** [YouTube/Vimeo Link](YOUR_VIDEO_LINK_HERE)
-- 💻 **GitHub Repository:** [github.com/YOUR_USERNAME/InfronAI](https://github.com/YOUR_USERNAME/InfronAI)
+- 🌐 **Live Demo:** [Hosted Url](YOUR_HOSTED_URL_HERE)
+- 📺 **Demo Video (3 min):** [YouTube/Vimeo Link](https://vimeo.com/1150735292?fl=sm&fe=ec)
+- 💻 **GitHub Repository:** [Github Repository](https://github.com/darshanbm26/InfronAI.git)
 - 📚 **Documentation:** [/backend/docs](backend/docs)
 - 📖 **API Docs:** `http://localhost:8000/docs` (when running locally)
 
@@ -406,7 +406,7 @@ This is an open-source project. You are free to use, modify, and distribute this
 
 <div align="center">
 
-**Built for [Hackathon Name] 2026**
+**Built for [AI Partner Catalyst: Accelerate Innovation] 2026**
 
 **⭐ Star this repo if you find it helpful!**
 
