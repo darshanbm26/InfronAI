@@ -1,7 +1,7 @@
 """
 Main FastAPI application for Google Cloud Sentinel
 """
-
+import os
 import time
 import logging
 from contextlib import asynccontextmanager
@@ -92,9 +92,20 @@ app = FastAPI(
 )
 
 # Add CORS middleware
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["http://localhost:3000", "http://localhost:3001", "http://localhost:3002"],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
+
+# Get CORS origins from environment variable
+cors_origins = os.getenv("CORS_ORIGINS", "http://localhost:3000").split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001", "http://localhost:3002"],
+    allow_origins=cors_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
