@@ -275,7 +275,7 @@ npm run dev
 
 ---
 
-## � Screenshots
+## 📸 Screenshots
 
 ### Home Page
 
