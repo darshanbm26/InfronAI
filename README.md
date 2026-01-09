@@ -7,17 +7,9 @@
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-black)](https://nextjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-009688.svg)](https://fastapi.tiangolo.com)
 
-## 📺 Demo Video
-
-**[Watch Demo Video (3 min)](https://vimeo.com/1150735292?fl=sm&fe=ec)**
-
-## 🌐 Live Demo
-
-**[Try InfronAI Live](YOUR_HOSTED_PROJECT_URL_HERE)**
-
 ## 📦 Repository
 
-**[GitHub Repository](https://github.com/darshanbm26/InfronAI.git)**
+**[GitHub Repository](https://github.com/darshanbm26/InfronAI)**
 
 ---
 
@@ -29,6 +21,7 @@
 - [Architecture](#architecture)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
+- [Screenshots](#screenshots)
 - [API Documentation](#api-documentation)
 - [Project Structure](#project-structure)
 - [License](#license)
@@ -62,31 +55,37 @@ InfronAI (Google Cloud Sentinel) is an intelligent infrastructure recommendation
 ## ✨ Features
 
 ### 🤖 AI-Powered Recommendations
+
 - **Google Gemini Integration** - Leverages Gemini 2.0 Flash for intelligent analysis
 - **Context-Aware** - Understands your workload requirements and constraints
 - **Multi-Key Support** - Handles rate limits with automatic key rotation (4 API keys)
 
 ### 💰 Cost Optimization
+
 - **Real-Time Pricing** - Live GCP pricing data via Cloud Billing API
 - **Cost Comparisons** - Compare different configurations side-by-side
 - **Budget Awareness** - Respects your cost constraints and suggests alternatives
 
 ### 📊 Comprehensive Analysis
+
 - **Trade-off Analysis** - Cost vs Performance vs Reliability matrix
 - **Alternative Suggestions** - Multiple viable infrastructure options
 - **Risk Assessment** - Identify potential bottlenecks and issues
 
 ### 🔄 Continuous Learning
+
 - **Feedback Loop** - Learns from user decisions and customizations
 - **Pattern Recognition** - Identifies successful configurations
 - **Improving Recommendations** - Gets smarter with every interaction
 
 ### 📈 Observability & Monitoring
+
 - **Datadog Integration** - Full telemetry and APM monitoring
 - **Custom Metrics** - Track recommendation quality and user satisfaction
 - **Business Intelligence** - Dashboards for insights and analytics
 
 ### 🛠️ Production-Ready Outputs
+
 - **Infrastructure as Code** - Generate Terraform configurations
 - **Docker Support** - Containerized deployment guides
 - **CI/CD Templates** - Ready-to-use deployment pipelines
@@ -96,23 +95,27 @@ InfronAI (Google Cloud Sentinel) is an intelligent infrastructure recommendation
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **Next.js 14** - React framework with App Router
 - **TypeScript** - Type-safe development
 - **Tailwind CSS** - Utility-first styling
 - **React Components** - Modular, reusable UI for all 8 phases
 
 ### Backend
+
 - **Python 3.9+** - Core language
 - **FastAPI** - High-performance async API framework
 - **Pydantic** - Data validation and settings management
 - **Uvicorn** - Lightning-fast ASGI server
 
 ### AI & Cloud
+
 - **Google Gemini 2.0 Flash** - AI model for recommendations
 - **GCP Cloud Billing API** - Real-time pricing data
 - **GCP Services** - Compute Engine, Cloud Run, Cloud Storage, Cloud SQL, etc.
 
 ### Monitoring & Observability
+
 - **Datadog** - APM, metrics, logs, and events
 - **Custom Telemetry** - Business event tracking across all phases
 
@@ -123,28 +126,28 @@ InfronAI (Google Cloud Sentinel) is an intelligent infrastructure recommendation
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                   Frontend (Next.js + TypeScript)           │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
-│  │ Phase 1  │→ │ Phase 2  │→ │ Phase 3  │→ │ Phase 4  │   │
-│  │ Intent   │  │ Architect│  │  Specs   │  │ Pricing  │   │
-│  └──────────┘  └──────────┘  └──────────┘  └──────────┘   │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
-│  │ Phase 5  │→ │ Phase 6  │→ │ Phase 7  │→ │ Phase 8  │   │
-│  │Tradeoffs │  │Recommend │  │ Decision │  │ Learning │   │
-│  └──────────┘  └──────────┘  └──────────┘  └──────────┘   │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐     │
+│  │ Phase 1  │→ │ Phase 2  │→ │ Phase 3  │→ │ Phase 4  │     │
+│  │ Intent   │  │ Architect│  │  Specs   │  │ Pricing  │     │
+│  └──────────┘  └──────────┘  └──────────┘  └──────────┘     │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐     │
+│  │ Phase 5  │→ │ Phase 6  │→ │ Phase 7  │→ │ Phase 8  │     │
+│  │Tradeoffs │  │Recommend │  │ Decision │  │ Learning │     │
+│  └──────────┘  └──────────┘  └──────────┘  └──────────┘     │
 └─────────────────────────┬───────────────────────────────────┘
                           │ REST API (JSON)
 ┌─────────────────────────▼───────────────────────────────────┐
 │                Backend (FastAPI + Python)                   │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐     │
-│  │   Gemini     │  │  GCP Billing │  │   Datadog    │     │
-│  │   Client     │  │  API Client  │  │  Telemetry   │     │
-│  │ (Multi-Key)  │  │   (Pricing)  │  │   (APM)      │     │
-│  └──────────────┘  └──────────────┘  └──────────────┘     │
-│  ┌──────────────────────────────────────────────────┐      │
-│  │           8-Phase Processing Engine              │      │
-│  │  Phase1→Phase2→Phase3→Phase4→Phase5→Phase6→      │      │
-│  │         Phase7→Phase8→Generate Artifacts         │      │
-│  └──────────────────────────────────────────────────┘      │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   Gemini     │  │  GCP Billing │  │   Datadog    │       │
+│  │   Client     │  │  API Client  │  │  Telemetry   │       │
+│  │ (Multi-Key)  │  │   (Pricing)  │  │   (APM)      │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
+│  ┌──────────────────────────────────────────────────┐       │
+│  │           8-Phase Processing Engine              │       │
+│  │  Phase1→Phase2→Phase3→Phase4→Phase5→Phase6→      │       │
+│  │         Phase7→Phase8→Generate Artifacts         │       │
+│  └──────────────────────────────────────────────────┘       │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -197,6 +200,7 @@ cp .env.example .env
 ```
 
 **Minimum Required Configuration** (`.env`):
+
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
 GEMINI_MODEL=gemini-2.0-flash
@@ -217,12 +221,14 @@ echo "NEXT_PUBLIC_API_URL=http://localhost:8000" > .env.local
 #### 4️⃣ Run the Application
 
 **Terminal 1 - Backend:**
+
 ```bash
 cd backend
 uvicorn src.api.app:app --reload --host 0.0.0.0 --port 8000
 ```
 
 **Terminal 2 - Frontend:**
+
 ```bash
 cd frontend
 npm run dev
@@ -238,22 +244,26 @@ npm run dev
 ### Quick Start Example
 
 1. **Enter Your Intent** (Phase 1)
+
    ```
    "I need a web application for 10,000 daily users with a PostgreSQL database"
    ```
 
 2. **Review AI Recommendations** (Phases 2-6)
+
    - **Architecture**: Cloud Run + Cloud SQL
    - **Specs**: 2 vCPU, 4GB RAM, 100GB SSD
    - **Estimated Cost**: $45-65/month
    - **Performance**: Medium-High tier
 
 3. **Explore Tradeoffs** (Phase 5)
+
    - Compare: Cloud Run vs Compute Engine vs GKE
    - Cost/Performance matrix
    - Reliability and scalability impacts
 
 4. **Make Decision** (Phase 7)
+
    - ✅ **Accept** → Download Terraform + Docker configs
    - ✏️ **Customize** → Adjust specs and regenerate
    - ❌ **Reject** → Provide feedback for better recommendations
@@ -265,14 +275,70 @@ npm run dev
 
 ---
 
-## 📖 API Documentation
+## � Screenshots
+
+### Home Page
+
+<img width="1109" height="618" alt="image" src="https://github.com/user-attachments/assets/33f3095c-35e5-4cd9-80af-c9e71aef9406" />
+
+### Phase 1: Intent Capture
+
+<img width="996" height="657" alt="image" src="https://github.com/user-attachments/assets/2e8b3bcd-bdf2-43a7-95a6-02b73c53ce60" />
+
+### Phase 2-4: Architecture & Pricing
+
+<img width="1000" height="619" alt="image" src="https://github.com/user-attachments/assets/c7de27a1-319c-477c-a68f-314da61fa623" />
+<img width="1000" height="821" alt="image" src="https://github.com/user-attachments/assets/bd277989-906d-438e-b334-2e33f4df68a0" />
+<img width="997" height="630" alt="image" src="https://github.com/user-attachments/assets/84327380-f1e8-46ae-854e-926f1e38b790" />
+
+### Phase 5: Tradeoff Analysis
+
+<img width="992" height="452" alt="image" src="https://github.com/user-attachments/assets/5c10e47b-65e8-4235-88ca-7c57f5ec32ae" />
+
+### Phase 6: Final Recommendation
+
+<img width="746" height="244" alt="image" src="https://github.com/user-attachments/assets/1b8d9a91-9d5a-4123-a4ef-d4450a749191" />
+<img width="750" height="547" alt="image" src="https://github.com/user-attachments/assets/41891da7-a180-4109-a20e-cacf045be94b" />
+
+### Phase 7: User Decision
+
+<img width="747" height="507" alt="image" src="https://github.com/user-attachments/assets/d5c916f1-0d6e-4aac-8d61-79f67f687453" />
+<img width="741" height="253" alt="image" src="https://github.com/user-attachments/assets/e406e34b-74ea-4cfd-95b5-60dd410faa80" />
+
+### Datadog Dashboards
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/a405b8c2-a5e2-45be-ae0f-c39e5cdb354a" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/b01fcd0c-4dc8-4dc1-bebd-0a8d4e98e02a" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/6ed1f3f4-37c4-40ae-a669-f34c8a598409" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/f8a9f2e0-d181-438e-9993-9aeaa16f60ce" />
+
+### Datadog Monitors and SLOs
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/18a22425-96f7-477f-9918-8d22e06ccb69" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/bc71885a-f4d5-4c6d-bd02-8bef27347ce9" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/df4e5b08-e7e0-4972-a039-8313ed147446" />
+
+### Datadog Runbooks
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/23bc4d53-041a-4058-ba33-0b41af371bd7" />
+
+### Datadog Incidents
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/3ce4e4f6-77aa-430b-8e1d-1fe962192fcf" />
+
+### Datadog Cases
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/f9adf940-92c5-489f-84b1-a1967cb429d8" />
+
+---
+
+## �📖 API Documentation
 
 ### Core Endpoints
 
 #### `POST /api/phase1/capture-intent`
+
 Capture user's infrastructure requirements
 
 **Request:**
+
 ```json
 {
   "user_input": "Web app for 10k daily users with database",
@@ -281,9 +347,11 @@ Capture user's infrastructure requirements
 ```
 
 #### `POST /api/analyze`
+
 Run complete 8-phase analysis
 
 **Request:**
+
 ```json
 {
   "user_input": "E-commerce platform, 50k daily users",
@@ -293,14 +361,15 @@ Run complete 8-phase analysis
 ```
 
 **Response:**
+
 ```json
 {
   "session_id": "sess_abc123",
   "recommendations": [
     {
       "service": "Cloud Run",
-      "specs": {"cpu": 4, "memory": "8Gi"},
-      "cost_monthly": 120.50
+      "specs": { "cpu": 4, "memory": "8Gi" },
+      "cost_monthly": 120.5
     }
   ],
   "artifacts": {
@@ -396,17 +465,14 @@ This is an open-source project. You are free to use, modify, and distribute this
 
 ## 🔗 Important Links
 
-- 🌐 **Live Demo:** [Hosted Url](YOUR_HOSTED_URL_HERE)
-- 📺 **Demo Video (3 min):** [YouTube/Vimeo Link](https://vimeo.com/1150735292?fl=sm&fe=ec)
-- 💻 **GitHub Repository:** [Github Repository](https://github.com/darshanbm26/InfronAI.git)
-- 📚 **Documentation:** [/backend/docs](backend/docs)
-- 📖 **API Docs:** `http://localhost:8000/docs` (when running locally)
+- 💻 **GitHub Repository:** [Link](https://github.com/darshanbm26/InfronAI)
+- 📖 **API:** `http://localhost:8000` (when running locally)
 
 ---
 
 <div align="center">
 
-**Built for [AI Partner Catalyst: Accelerate Innovation] 2026**
+**Built for [AI Partner Catalyst hackathon] 2026**
 
 **⭐ Star this repo if you find it helpful!**
 
